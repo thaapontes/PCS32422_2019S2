@@ -16,7 +16,7 @@ O projeto foi desenvolvido e testado no software Quartus Prime Lite.
 Foram desenvolvidos duas entidades TopLevel: uma denomina-se apenas “TopLevel” e a outra “TopLevelv2”. A primeira possui algumas entradas e saídas de teste, para simulação, enquanto que a segunda possui apenas as entradas de HCLK e HRESETn.
 
 
-Os testes são feito com WaveForms, sendo que alguns já foram enviados junto ao código.
+Os testes são feitos com WaveForms, sendo que alguns já foram enviados junto ao código.
 Na entidade TopLevel de teste foram colocadas entradas para simulações de dois mestres, sendo 4 escravos instanciados (os escravos possuem uma máquina de estados que simulam seu comportamento. Os mestres devem ser ter comportamento simulado pelo usuário): 
 - “HADDR_teste_M0” e “HADDR_teste_M1”: são os sinais de endereço dos mestres 0 e 1 e são usados para acessar um dado endereço de um dado escravo. Vale lembrar que como há 16 conexões possíveis com escravos, o algoritmo de decodificação escolhido se baseia nos 4 primeiros bits do endereço. Vale ressaltar que foram instanciados 4 escravos, com a máquina de estados descrita no relatório. 
 - “HTRANS_teste_M0” e “HTRANS_teste_M1” indicam se está ocorrendo ou não transferência para dado mestre. É um sinal de dois bits, cujo bit mais significativo indica que há transferência (existem 2 tipos de transferência, denotadas por “10” e “11”, mas são tratadas da mesma forma pelo barramento).
